@@ -4,27 +4,28 @@
 <title>Untuk Wifa ❤️</title>
 
 <style>
+
 body{
   margin:0;
-  font-family:Arial, sans-serif;
+  font-family:Arial,sans-serif;
   background:linear-gradient(#ffd6e5,#fff);
   text-align:center;
   padding:30px;
-  overflow-x:hidden;
+  overflow:hidden;
 }
 
 .kartu{
   background:white;
   max-width:650px;
   margin:auto;
-  padding:30px;
+  padding:35px;
   border-radius:30px;
   box-shadow:0 10px 30px rgba(0,0,0,0.15);
 }
 
 h1{
   color:#e91e63;
-  font-size:50px;
+  font-size:55px;
 }
 
 h2{
@@ -39,16 +40,45 @@ p{
 }
 
 .foto{
-  width:300px;
+  width:320px;
   border-radius:25px;
-  margin:20px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.2);
+}
+
+.hati{
+  font-size:70px;
+  animation:denyut 1s infinite alternate;
+}
+
+@keyframes denyut{
+  from{
+    transform:scale(1);
+  }
+  to{
+    transform:scale(1.2);
+  }
+}
+
+.muncul{
+  animation:muncul 3s;
+}
+
+@keyframes muncul{
+  from{
+    opacity:0;
+    transform:translateY(30px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
 }
 
 button{
   background:#e91e63;
   color:white;
-  border:none;
-  padding:15px 35px;
+  border:0;
+  padding:16px 35px;
   border-radius:40px;
   font-size:22px;
 }
@@ -73,34 +103,43 @@ button{
 
 </head>
 
+
 <body>
 
 <audio controls autoplay loop>
 <source src="1d429762199a9347ecdc5b8175919cba.mp3" type="audio/mpeg">
 </audio>
 
+
 <div class="bunga">🌸</div>
-<div class="bunga" style="left:30%;animation-delay:2s;">🌹</div>
-<div class="bunga" style="left:70%;animation-delay:1s;">🌸</div>
+<div class="bunga" style="left:40%;animation-delay:2s;">🌹</div>
+<div class="bunga" style="left:80%;animation-delay:1s;">🌸</div>
 
-<div class="kartu">
 
-<h1>Untuk Wifa ❤️</h1>
+<div class="kartu muncul">
+
+<div class="hati">❤️</div>
+
+<h1>Untuk Wifa</h1>
 
 <h2>Dari orang yang sangat mencintaimu</h2>
 
+
 <img class="foto" src="IMG-20260311-WA0024.jpg">
 
+
 <p>
-Ada sesuatu yang ingin aku sampaikan.
+Ada sebuah pesan kecil yang ingin aku sampaikan.
 <br><br>
-Halaman kecil ini aku buat khusus untuk kamu.
+Halaman ini aku buat khusus untuk kamu.
 Semoga kamu bisa merasakan ketulusan dari setiap kata yang ada di sini ❤️
 </p>
+
 
 <a href="kenangan.html">
 <button>Buka Kenangan 💌</button>
 </a>
+
 
 </div>
 
