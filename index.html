@@ -14,117 +14,93 @@ box-sizing:border-box;
 
 body{
 margin:0;
-font-family:Arial,sans-serif;
-background:linear-gradient(#ffd6e5,#fff);
+font-family:Georgia,serif;
+background:#0b1026;
+color:white;
 text-align:center;
 overflow-x:hidden;
 }
 
 
-#opening{
+.stars{
 position:fixed;
 width:100%;
 height:100%;
-background:#ffe6ee;
-display:flex;
-flex-direction:column;
-justify-content:center;
+background-image:
+radial-gradient(white 1px,transparent 1px);
+background-size:40px 40px;
+opacity:.4;
+z-index:-1;
+}
+
+
+.halaman{
+display:none;
+min-height:100vh;
+padding:40px 20px;
 align-items:center;
-z-index:999;
+justify-content:center;
 }
 
 
-#opening h1{
-font-size:45px;
-color:#e91e63;
+.aktif{
+display:flex;
 }
 
 
-.start{
-background:#e91e63;
-color:white;
-padding:15px 35px;
-border:none;
-border-radius:40px;
-font-size:20px;
-}
-
-
-.container{
-max-width:750px;
-margin:auto;
-padding:25px;
-}
-
-
-.card{
-background:white;
-padding:30px;
+.kotak{
+max-width:700px;
+background:rgba(255,255,255,.12);
+backdrop-filter:blur(10px);
+padding:35px;
 border-radius:30px;
-box-shadow:0 10px 30px rgba(0,0,0,.2);
-margin-top:30px;
+box-shadow:0 0 30px rgba(255,100,150,.3);
 }
 
 
 h1{
-color:#e91e63;
-font-size:50px;
+font-size:55px;
+color:#ff8fb3;
 }
 
 
 h2{
-color:#555;
+font-size:30px;
 }
 
 
 p{
-font-size:20px;
+font-size:22px;
 line-height:1.8;
-color:#444;
 }
 
 
-.foto{
-width:260px;
-height:260px;
-object-fit:cover;
-border-radius:25px;
-margin:10px;
-box-shadow:0 5px 20px rgba(0,0,0,.2);
+button{
+background:#ff4f8b;
+color:white;
+border:0;
+padding:15px 35px;
+border-radius:50px;
+font-size:20px;
 }
 
 
 .hati{
-font-size:70px;
+font-size:80px;
 animation:denyut 1s infinite alternate;
 }
 
 
 @keyframes denyut{
+
 from{
 transform:scale(1);
 }
+
 to{
 transform:scale(1.2);
 }
-}
 
-
-.bunga{
-position:fixed;
-top:-50px;
-font-size:35px;
-animation:jatuh 7s infinite;
-}
-
-
-@keyframes jatuh{
-from{
-transform:translateY(-50px);
-}
-to{
-transform:translateY(110vh);
-}
 }
 
 
@@ -132,24 +108,11 @@ transform:translateY(110vh);
 
 </head>
 
+
 <body>
 
 
-<div id="opening">
-
-<h1>
-Untuk Wifa ❤️
-</h1>
-
-<p>
-Ada sesuatu yang ingin aku sampaikan...
-</p>
-
-<button class="start" onclick="mulai()">
-Mulai Membaca 💌
-</button>
-
-</div>
+<div class="stars"></div>
 
 
 <audio id="musik" loop>
@@ -157,15 +120,9 @@ Mulai Membaca 💌
 </audio>
 
 
-<div class="bunga">🌸</div>
-<div class="bunga" style="left:30%;animation-delay:2s;">🌹</div>
-<div class="bunga" style="left:70%;animation-delay:1s;">🌸</div>
+<div class="halaman aktif" id="awal">
 
-
-<div class="container">
-
-
-<div class="card">
+<div class="kotak">
 
 <div class="hati">
 ❤️
@@ -178,18 +135,28 @@ Untuk Wifa
 
 
 <h2>
-Dari orang yang sangat mencintaimu
+Sebuah cerita kecil dari seseorang yang menyayangimu
 </h2>
 
 
-<img class="foto" src="IMG-20260311-WA0024.jpg">
-
-
 <p>
-Halaman kecil ini aku buat khusus untuk kamu.
+Ada sesuatu yang ingin aku sampaikan.
 <br><br>
-Semoga setiap kata yang ada di sini bisa menyampaikan isi hatiku.
+Klik tombol di bawah untuk membuka cerita.
 </p>
+
+
+<button onclick="buka(2)">
+Mulai Cerita 💌
+</button>
+
+
+</div>
+
+</div>
+<div class="halaman" id="halaman2">
+
+<div class="kotak">
 
 
 <h1>
@@ -197,102 +164,160 @@ Kenangan Kita 📸
 </h1>
 
 
-<img class="foto" src="IMG-20260311-WA0024.jpg">
-
-<img class="foto" src="IMG-20260422-WA0040.jpg">
-
-<img class="foto" src="IMG-20260409-WA0092.jpg">
-
-<img class="foto" src="IMG-20260409-WA0042.jpg">
 <p>
+Beberapa momen yang akan selalu aku ingat.
+<br>
+Terima kasih sudah menjadi bagian dari cerita hidupku ❤️
+</p>
+
+
+
+<img src="IMG-20260311-WA0024.jpg"
+style="width:260px;height:260px;object-fit:cover;border-radius:25px;margin:10px;">
+
+
+<img src="IMG-20260422-WA0040.jpg"
+style="width:260px;height:260px;object-fit:cover;border-radius:25px;margin:10px;">
+
+
+<img src="IMG-20260409-WA0092.jpg"
+style="width:260px;height:260px;object-fit:cover;border-radius:25px;margin:10px;">
+
+
+<img src="IMG-20260409-WA0042.jpg"
+style="width:260px;height:260px;object-fit:cover;border-radius:25px;margin:10px;">
+
+
+
+<p>
+
+Setiap foto punya cerita.
+<br><br>
+
+Mungkin waktu terus berjalan,
+tapi kenangan yang indah akan selalu tersimpan.
+
+</p>
+
+
+<button onclick="buka(3)">
+Lanjut Membaca ❤️
+</button>
+
+
+</div>
+
+</div>
+
+
+
+
+
+<div class="halaman" id="halaman3">
+
+<div class="kotak">
+
+
+<div class="hati">
+❤️
+</div>
+
+
+<h1>
+Untuk Wifa
+</h1>
+
+
+
+<p>
+
+Dari orang yang sangat mencintaimu ❤️
+
+<br><br>
 
 Aku ingin meminta maaf atas semua kesalahan yang pernah aku lakukan.
 
 <br><br>
 
-Maaf jika ada perkataan, sikap, atau hal kecil dariku yang pernah membuat hati kamu terluka.
+Maaf jika ada perkataan atau sikapku yang pernah membuat hati kamu terluka.
 
 <br><br>
 
-Aku sadar aku bukan seseorang yang sempurna.
-Tapi aku ingin terus belajar menjadi lebih baik.
+Terima kasih sudah hadir dalam hidupku.
+Terima kasih untuk semua waktu, perhatian, dan kenangan yang sudah kita lewati.
 
 <br><br>
 
-Terima kasih sudah pernah hadir dalam hidupku.
-Terima kasih untuk semua waktu, perhatian, tawa, dan kenangan yang sudah kita lewati.
+Kamu adalah seseorang yang sangat berarti bagiku.
 
 <br><br>
 
-Wifa, kamu adalah seseorang yang sangat berarti bagiku.
+Aku mungkin belum sempurna,
+tapi aku akan terus belajar menjadi lebih baik.
 
 <br><br>
 
-Aku berharap kamu selalu bahagia,
+Semoga kamu selalu bahagia,
 selalu tersenyum,
-dan selalu dikelilingi oleh hal-hal baik.
+dan selalu dikelilingi hal-hal baik.
 
 <br><br>
 
-Apapun yang terjadi, aku akan selalu menghargai cerita yang pernah kita buat bersama.
+Terima kasih sudah menjadi bagian indah dalam ceritaku, Wifa ❤️
 
-<br><br>
-
-Terima kasih sudah membaca sampai akhir ❤️
 
 </p>
 
 
-<button onclick="kejutan()">
-Klik Pesan Rahasia ❤️
+<button onclick="rahasia()">
+Pesan Rahasia 💌
 </button>
 
 
-<div id="rahasia" style="
-display:none;
-background:#ffe6ee;
-padding:20px;
-border-radius:20px;
-margin-top:20px;
-font-size:20px;
-">
-
+<p id="pesan" style="display:none;">
 
 Wifa ❤️
 
 <br><br>
 
-Kalau kamu sedang membaca ini,
-aku hanya ingin bilang...
+Apapun yang terjadi,
+aku akan selalu menghargai cerita yang pernah kita buat.
 
 <br><br>
 
-Kamu adalah seseorang yang sangat berharga.
+Semoga kamu selalu bahagia.
 
-<br><br>
+❤️
 
-Semoga senyum kamu selalu ada,
-dan semoga kamu selalu bahagia.
-
-<br><br>
-
-Dari seseorang yang sangat menyayangimu ❤️
-
-</div>
+</p>
 
 
 </div>
 
 </div>
-
-
-
 <script>
 
+function buka(nomor){
 
-function mulai(){
+document.getElementById("awal").classList.remove("aktif");
+document.getElementById("halaman2").classList.remove("aktif");
+document.getElementById("halaman3").classList.remove("aktif");
 
-document.getElementById("opening").style.display="none";
+
+if(nomor==2){
+
+document.getElementById("halaman2").classList.add("aktif");
+
+}
+
+if(nomor==3){
+
+document.getElementById("halaman3").classList.add("aktif");
+
+}
+
+
+// mulai musik saat tombol ditekan
 
 document.getElementById("musik").play();
 
@@ -300,13 +325,17 @@ document.getElementById("musik").play();
 
 
 
-function kejutan(){
+// tombol pesan rahasia
 
-document.getElementById("rahasia").style.display="block";
+function rahasia(){
+
+document.getElementById("pesan").style.display="block";
 
 }
 
 
+
+// efek hati saat layar disentuh
 
 document.onclick=function(e){
 
@@ -320,10 +349,14 @@ hati.style.top=e.clientY+"px";
 hati.style.fontSize="30px";
 hati.style.zIndex="999";
 
+
 document.body.appendChild(hati);
 
 
-hati.animate([
+
+hati.animate(
+
+[
 
 {
 transform:"translateY(0)",
@@ -331,21 +364,27 @@ opacity:1
 },
 
 {
-transform:"translateY(-120px)",
+transform:"translateY(-150px)",
 opacity:0
 }
 
 ],
+
 {
-duration:1000
-});
+
+duration:1200
+
+}
+
+);
+
 
 
 setTimeout(function(){
 
 hati.remove();
 
-},1000);
+},1200);
 
 
 }
