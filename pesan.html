@@ -15,18 +15,26 @@ body{
   background:white;
   padding:25px;
   border-radius:25px;
-  max-width:600px;
-  margin:auto;
 }
 
 h1{
   color:#e91e63;
 }
 
-p{
-  font-size:18px;
-  line-height:1.8;
-  color:#444;
+.bunga{
+  position:fixed;
+  top:-50px;
+  font-size:35px;
+  animation:jatuh 5s infinite;
+}
+
+@keyframes jatuh{
+  from{
+    transform:translateY(-50px);
+  }
+  to{
+    transform:translateY(100vh);
+  }
 }
 
 button{
@@ -42,27 +50,29 @@ button{
 
 <body>
 
-<div class="box">
+<!-- Musik -->
+<audio controls autoplay loop>
+  <source src="1d429762199a9347ecdc5b8175919cba.mp3" type="audio/mpeg">
+</audio>
 
-<div style="font-size:60px;">💌🌹</div>
+<!-- Bunga jatuh -->
+<div class="bunga">🌸</div>
+<div class="bunga" style="left:30%;animation-delay:2s;">🌹</div>
+<div class="bunga" style="left:70%;animation-delay:1s;">🌸</div>
+
+<div class="box">
 
 <h1>Pesan Untuk Kamu ❤️</h1>
 
 <p>
-Aku ingin meminta maaf atas semua kesalahan yang pernah aku lakukan.
+Aku minta maaf atas semua kesalahan yang pernah aku lakukan.
 <br><br>
-Terima kasih sudah pernah hadir, memberikan waktu, perhatian,
-dan menjadi seseorang yang berarti.
-<br><br>
-Aku berharap semua hal yang kurang baik bisa diperbaiki.
-Semoga kamu selalu bahagia dan tersenyum.
-<br><br>
-Terima kasih sudah membaca sampai akhir ❤️
+Terima kasih sudah menjadi bagian dari cerita hidupku.
+Semoga kita bisa menjadi lebih baik lagi.
+❤️
 </p>
 
-<a href="index.html">
-<button>Kembali ke awal ❤️</button>
-</a>
+<button>Kembali ❤️</button>
 
 </div>
 
