@@ -5,30 +5,50 @@
 
 <style>
 body{
- text-align:center;
- font-family:Arial;
- background:#fff0f5;
- padding:20px;
+text-align:center;
+font-family:Arial;
+background:#fff0f5;
+padding:20px;
 }
 
 img{
- width:250px;
- border-radius:20px;
- margin:10px;
+width:250px;
+border-radius:20px;
+margin:10px;
+}
+
+.bunga{
+position:fixed;
+top:-50px;
+font-size:35px;
+animation:jatuh 5s infinite;
+}
+
+@keyframes jatuh{
+from{transform:translateY(-50px);}
+to{transform:translateY(100vh);}
 }
 
 button{
- background:#e91e63;
- color:white;
- border:0;
- padding:12px 25px;
- border-radius:30px;
+background:#e91e63;
+color:white;
+border:0;
+padding:12px 25px;
+border-radius:30px;
 }
 </style>
 
 </head>
 
 <body>
+
+<audio controls autoplay loop>
+<source src="1d429762199a9347ecdc5b8175919cba.mp3
+ " type="audio/mpeg">
+</audio>
+
+<div class="bunga">🌸</div>
+<div class="bunga" style="left:50%;animation-delay:2s;">🌹</div>
 
 <h1>Kenangan Kita ❤️</h1>
 
