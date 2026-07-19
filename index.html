@@ -1,44 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Maaf Ya ❤️</title>
+<title>Untuk Wifa ❤️</title>
 
 <style>
 body{
-text-align:center;
-font-family:Arial;
-background:#ffe6ee;
-padding:30px;
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:linear-gradient(#ffd6e5,#fff);
+  text-align:center;
+  padding:30px;
+  overflow-x:hidden;
 }
 
-.box{
-background:white;
-padding:25px;
-border-radius:25px;
+.kartu{
+  background:white;
+  max-width:650px;
+  margin:auto;
+  padding:30px;
+  border-radius:30px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.15);
 }
 
 h1{
-color:#e91e63;
-font-size:50px;
+  color:#e91e63;
+  font-size:50px;
 }
 
 h2{
-color:#555;
-font-size:30px;
+  color:#555;
+  font-size:28px;
 }
 
 p{
-font-size:24px;
-line-height:1.8;
+  font-size:22px;
+  line-height:1.8;
+  color:#444;
+}
+
+.foto{
+  width:300px;
+  border-radius:25px;
+  margin:20px;
 }
 
 button{
-background:#e91e63;
-color:white;
-border:0;
-padding:15px 35px;
-border-radius:30px;
-font-size:22px;
+  background:#e91e63;
+  color:white;
+  border:none;
+  padding:15px 35px;
+  border-radius:40px;
+  font-size:22px;
+}
+
+.bunga{
+  position:fixed;
+  top:-50px;
+  font-size:35px;
+  animation:jatuh 6s infinite;
+}
+
+@keyframes jatuh{
+  from{
+    transform:translateY(-50px);
+  }
+  to{
+    transform:translateY(100vh);
+  }
 }
 
 </style>
@@ -47,26 +75,32 @@ font-size:22px;
 
 <body>
 
-<div class="box">
+<audio controls autoplay loop>
+<source src="1d429762199a9347ecdc5b8175919cba.mp3" type="audio/mpeg">
+</audio>
 
-<h1>Untuk Kamu ❤️</h1>
+<div class="bunga">🌸</div>
+<div class="bunga" style="left:30%;animation-delay:2s;">🌹</div>
+<div class="bunga" style="left:70%;animation-delay:1s;">🌸</div>
 
-<h2>Faidhil & wifa</h2>
+<div class="kartu">
 
-<img src="IMG-20260311-WA0024.jpg" width="300" style="border-radius:20px;">
+<h1>Untuk Wifa ❤️</h1>
+
+<h2>Dari orang yang sangat mencintaimu</h2>
+
+<img class="foto" src="IMG-20260311-WA0024.jpg">
 
 <p>
-Aku membuat halaman kecil ini untuk meminta maaf.
-Semoga kamu mau membaca sampai akhir ❤️
+Ada sesuatu yang ingin aku sampaikan.
+<br><br>
+Halaman kecil ini aku buat khusus untuk kamu.
+Semoga kamu bisa merasakan ketulusan dari setiap kata yang ada di sini ❤️
 </p>
 
-<button onclick="bukaSurat()">Buka Surat 💌</button>
-
-<p id="surat" style="display:none;">
-Aku minta maaf atas semua kesalahan yang pernah aku lakukan.
-Terima kasih sudah hadir dan menjadi bagian dari cerita hidupku,
-  jangan tingalin akuu yaa cintaakuu💕❤️
-</p>
+<a href="kenangan.html">
+<button>Buka Kenangan 💌</button>
+</a>
 
 </div>
 
